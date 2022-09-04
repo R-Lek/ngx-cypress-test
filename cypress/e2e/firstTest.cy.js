@@ -41,6 +41,16 @@ describe('Our 1st suite', () => {
 
     })
 
+    it.only('second test', () => {
+        cy.visit('/')
+        cy.contains('Forms').click()
+        cy.contains('Form Layouts').click()
+
+        cy.get('[data-cy="signInButton"]')
+
+        cy.contains('sign in')
+    })
+
    
 
 })
